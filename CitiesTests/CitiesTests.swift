@@ -9,28 +9,50 @@ import XCTest
 @testable import Cities
 
 class CitiesTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    var cityNode: Trie!
+    var countryNode: Trie!
+    
+    override func setUp() {
+        super.setUp()
+        cityNode = Trie()
+        countryNode = Trie()
+        let list = [
+            CityModel(country: "US", name: "Alabama", id: 1, coord: CityCoordinateModel(lon: 0.00, lat: 0.00)),
+            CityModel(country: "US", name: "Albuquerque", id: 2, coord: CityCoordinateModel(lon: 0.00, lat: 0.00)),
+            CityModel(country: "US", name: "Anaheim", id: 3, coord: CityCoordinateModel(lon: 0.00, lat: 0.00)),
+            CityModel(country: "US", name: "Arizona", id: 4, coord: CityCoordinateModel(lon: 0.00, lat: 0.00)),
+            CityModel(country: "AU", name: "Sydney", id: 5, coord: CityCoordinateModel(lon: 0.00, lat: 0.00)),
+        ]
+        for city in list {
+            cityNode.insert(key: city.name, city: city)
+            countryNode.insert(key: city.country, city: city)
         }
     }
-
+    
+    func test_search_prefix_without_country_node() {
+        let prefix = "alb"
+        
+        let result = cityNode.findCitiesWithPrefix(prefix)
+        
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result.first?.name, "Albuquerque")
+    }
+    
+    func test_search_prefix_with_country_node() {
+        
+        let prefix = "a"
+        
+        let citiesFromCityNode = cityNode.findCitiesWithPrefix(prefix)
+        let result = countryNode.findCitiesWithPrefix(prefix, filteredCityList: citiesFromCityNode) + citiesFromCityNode
+        
+        XCTAssertEqual(result.count, 5)
+        XCTAssertNotNil(result.first(where: { $0.name == "Sydney" }))
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        cityNode = nil
+        countryNode = nil
+    }
 }
