@@ -16,8 +16,6 @@
 		2F36716228D1EADE009BFCC2 /* CitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36716128D1EADE009BFCC2 /* CitiesUITests.swift */; };
 		2F36716428D1EADE009BFCC2 /* CitiesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36716328D1EADE009BFCC2 /* CitiesUITestsLaunchTests.swift */; };
 		2F36717528D1EDBB009BFCC2 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36717428D1EDBB009BFCC2 /* CityListViewController.swift */; };
-		2F36717828D1F24A009BFCC2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F36717728D1F24A009BFCC2 /* RxCocoa */; };
-		2F36717A28D1F24A009BFCC2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F36717928D1F24A009BFCC2 /* RxSwift */; };
 		2F36718128D1F425009BFCC2 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36718028D1F425009BFCC2 /* CityTableViewCell.swift */; };
 		2F36718528D1F5CF009BFCC2 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36718428D1F5CF009BFCC2 /* URLRequest.swift */; };
 		2F36718728D1F703009BFCC2 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36718628D1F703009BFCC2 /* CityModel.swift */; };
@@ -26,7 +24,6 @@
 		2F36718D28D2054D009BFCC2 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36718C28D2054D009BFCC2 /* CityViewModel.swift */; };
 		2F36719528D25129009BFCC2 /* TrieNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36719428D25129009BFCC2 /* TrieNode.swift */; };
 		2F36719728D252BF009BFCC2 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36719628D252BF009BFCC2 /* Trie.swift */; };
-		2F36719F28D3881B009BFCC2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F36719E28D3881B009BFCC2 /* SnapKit */; };
 		2F3671A128D3947A009BFCC2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671A028D3947A009BFCC2 /* Constant.swift */; };
 		2F3671A328D39FD5009BFCC2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671A228D39FD5009BFCC2 /* Reachability.swift */; };
 		2F3671A628D46C5C009BFCC2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671A528D46C5C009BFCC2 /* AppCoordinator.swift */; };
@@ -35,6 +32,9 @@
 		2F3671AD28D471CB009BFCC2 /* CityLocationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671AC28D471CB009BFCC2 /* CityLocationCoordinator.swift */; };
 		2F3671B428D47576009BFCC2 /* CityLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671B328D47576009BFCC2 /* CityLocationViewController.swift */; };
 		2F3671B628D4770E009BFCC2 /* CityLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671B528D4770E009BFCC2 /* CityLocationViewModel.swift */; };
+		2F3D6BCF28DB3690005A27F1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BCE28DB3690005A27F1 /* SnapKit */; };
+		2F3D6BD228DB36A2005A27F1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BD128DB36A2005A27F1 /* RxCocoa */; };
+		2F3D6BD428DB36A2005A27F1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BD328DB36A2005A27F1 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,9 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F36719F28D3881B009BFCC2 /* SnapKit in Frameworks */,
-				2F36717A28D1F24A009BFCC2 /* RxSwift in Frameworks */,
-				2F36717828D1F24A009BFCC2 /* RxCocoa in Frameworks */,
+				2F3D6BD428DB36A2005A27F1 /* RxSwift in Frameworks */,
+				2F3D6BD228DB36A2005A27F1 /* RxCocoa in Frameworks */,
+				2F3D6BCF28DB3690005A27F1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +310,9 @@
 			);
 			name = Cities;
 			packageProductDependencies = (
-				2F36717728D1F24A009BFCC2 /* RxCocoa */,
-				2F36717928D1F24A009BFCC2 /* RxSwift */,
-				2F36719E28D3881B009BFCC2 /* SnapKit */,
+				2F3D6BCE28DB3690005A27F1 /* SnapKit */,
+				2F3D6BD128DB36A2005A27F1 /* RxCocoa */,
+				2F3D6BD328DB36A2005A27F1 /* RxSwift */,
 			);
 			productName = Cities;
 			productReference = 2F36713D28D1EADD009BFCC2 /* Cities.app */;
@@ -387,8 +387,8 @@
 			);
 			mainGroup = 2F36713428D1EADD009BFCC2;
 			packageReferences = (
-				2F36717628D1F24A009BFCC2 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				2F36719D28D3881B009BFCC2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2F3D6BCD28DB3690005A27F1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 2F36713E28D1EADD009BFCC2 /* Products */;
 			projectDirPath = "";
@@ -789,17 +789,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2F36717628D1F24A009BFCC2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		2F3D6BCD28DB3690005A27F1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
 				branch = main;
 				kind = branch;
 			};
 		};
-		2F36719D28D3881B009BFCC2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -808,20 +808,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2F36717728D1F24A009BFCC2 /* RxCocoa */ = {
+		2F3D6BCE28DB3690005A27F1 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2F36717628D1F24A009BFCC2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 2F3D6BCD28DB3690005A27F1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2F3D6BD128DB36A2005A27F1 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		2F36717928D1F24A009BFCC2 /* RxSwift */ = {
+		2F3D6BD328DB36A2005A27F1 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2F36717628D1F24A009BFCC2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		2F36719E28D3881B009BFCC2 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F36719D28D3881B009BFCC2 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

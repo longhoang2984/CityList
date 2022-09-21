@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Differentiator
 
 typealias CitiesResponse = [CityModel]
 struct CityModel: Codable {
