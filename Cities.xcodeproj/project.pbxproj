@@ -12,7 +12,7 @@
 		2F36714828D1EADD009BFCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F36714628D1EADD009BFCC2 /* Main.storyboard */; };
 		2F36714A28D1EADE009BFCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F36714928D1EADE009BFCC2 /* Assets.xcassets */; };
 		2F36714D28D1EADE009BFCC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F36714B28D1EADE009BFCC2 /* LaunchScreen.storyboard */; };
-		2F36715828D1EADE009BFCC2 /* CitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36715728D1EADE009BFCC2 /* CitiesTests.swift */; };
+		2F36715828D1EADE009BFCC2 /* TrieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36715728D1EADE009BFCC2 /* TrieTests.swift */; };
 		2F36717528D1EDBB009BFCC2 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36717428D1EDBB009BFCC2 /* CityListViewController.swift */; };
 		2F36718128D1F425009BFCC2 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36718028D1F425009BFCC2 /* CityTableViewCell.swift */; };
 		2F36718528D1F5CF009BFCC2 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36718428D1F5CF009BFCC2 /* URLRequest.swift */; };
@@ -33,6 +33,9 @@
 		2F3D6BCF28DB3690005A27F1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BCE28DB3690005A27F1 /* SnapKit */; };
 		2F3D6BD228DB36A2005A27F1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BD128DB36A2005A27F1 /* RxCocoa */; };
 		2F3D6BD428DB36A2005A27F1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BD328DB36A2005A27F1 /* RxSwift */; };
+		2F7D39CA28DF2891000AA028 /* DataMockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D39C928DF2891000AA028 /* DataMockup.swift */; };
+		2F7D39CC28DF28B3000AA028 /* CityViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D39CB28DF28B3000AA028 /* CityViewModelTests.swift */; };
+		2F7D39CE28DF28E9000AA028 /* CityListSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D39CD28DF28E9000AA028 /* CityListSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,7 @@
 		2F36714C28D1EADE009BFCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F36714E28D1EADE009BFCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F36715328D1EADE009BFCC2 /* CitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F36715728D1EADE009BFCC2 /* CitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTests.swift; sourceTree = "<group>"; };
+		2F36715728D1EADE009BFCC2 /* TrieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrieTests.swift; sourceTree = "<group>"; };
 		2F36717428D1EDBB009BFCC2 /* CityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewController.swift; sourceTree = "<group>"; };
 		2F36718028D1F425009BFCC2 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		2F36718428D1F5CF009BFCC2 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
@@ -72,6 +75,9 @@
 		2F3671AC28D471CB009BFCC2 /* CityLocationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocationCoordinator.swift; sourceTree = "<group>"; };
 		2F3671B328D47576009BFCC2 /* CityLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocationViewController.swift; sourceTree = "<group>"; };
 		2F3671B528D4770E009BFCC2 /* CityLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocationViewModel.swift; sourceTree = "<group>"; };
+		2F7D39C928DF2891000AA028 /* DataMockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMockup.swift; sourceTree = "<group>"; };
+		2F7D39CB28DF28B3000AA028 /* CityViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModelTests.swift; sourceTree = "<group>"; };
+		2F7D39CD28DF28E9000AA028 /* CityListSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +140,9 @@
 		2F36715628D1EADE009BFCC2 /* CitiesTests */ = {
 			isa = PBXGroup;
 			children = (
-				2F36715728D1EADE009BFCC2 /* CitiesTests.swift */,
+				2F7D39C828DF2883000AA028 /* Helpers */,
+				2F36715728D1EADE009BFCC2 /* TrieTests.swift */,
+				2F7D39CB28DF28B3000AA028 /* CityViewModelTests.swift */,
 			);
 			path = CitiesTests;
 			sourceTree = "<group>";
@@ -261,6 +269,15 @@
 				2F3671B328D47576009BFCC2 /* CityLocationViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2F7D39C828DF2883000AA028 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F7D39C928DF2891000AA028 /* DataMockup.swift */,
+				2F7D39CD28DF28E9000AA028 /* CityListSpy.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,7 +416,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F36715828D1EADE009BFCC2 /* CitiesTests.swift in Sources */,
+				2F7D39CA28DF2891000AA028 /* DataMockup.swift in Sources */,
+				2F7D39CE28DF28E9000AA028 /* CityListSpy.swift in Sources */,
+				2F36715828D1EADE009BFCC2 /* TrieTests.swift in Sources */,
+				2F7D39CC28DF28B3000AA028 /* CityViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
