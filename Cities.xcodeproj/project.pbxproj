@@ -31,11 +31,12 @@
 		2F3671B428D47576009BFCC2 /* CityLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671B328D47576009BFCC2 /* CityLocationViewController.swift */; };
 		2F3671B628D4770E009BFCC2 /* CityLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3671B528D4770E009BFCC2 /* CityLocationViewModel.swift */; };
 		2F3D6BCF28DB3690005A27F1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BCE28DB3690005A27F1 /* SnapKit */; };
-		2F3D6BD228DB36A2005A27F1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BD128DB36A2005A27F1 /* RxCocoa */; };
-		2F3D6BD428DB36A2005A27F1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D6BD328DB36A2005A27F1 /* RxSwift */; };
 		2F7D39CA28DF2891000AA028 /* DataMockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D39C928DF2891000AA028 /* DataMockup.swift */; };
 		2F7D39CC28DF28B3000AA028 /* CityViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D39CB28DF28B3000AA028 /* CityViewModelTests.swift */; };
 		2F7D39CE28DF28E9000AA028 /* CityListSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D39CD28DF28E9000AA028 /* CityListSpy.swift */; };
+		2F7D39D028DF2A69000AA028 /* CityListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D39CF28DF2A69000AA028 /* CityListViewControllerTests.swift */; };
+		2F7D39DD28DF3073000AA028 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F7D39DC28DF3073000AA028 /* RxCocoa */; };
+		2F7D39DF28DF3073000AA028 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F7D39DE28DF3073000AA028 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		2F7D39C928DF2891000AA028 /* DataMockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMockup.swift; sourceTree = "<group>"; };
 		2F7D39CB28DF28B3000AA028 /* CityViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModelTests.swift; sourceTree = "<group>"; };
 		2F7D39CD28DF28E9000AA028 /* CityListSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListSpy.swift; sourceTree = "<group>"; };
+		2F7D39CF28DF2A69000AA028 /* CityListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F3D6BD428DB36A2005A27F1 /* RxSwift in Frameworks */,
-				2F3D6BD228DB36A2005A27F1 /* RxCocoa in Frameworks */,
+				2F7D39DF28DF3073000AA028 /* RxSwift in Frameworks */,
+				2F7D39DD28DF3073000AA028 /* RxCocoa in Frameworks */,
 				2F3D6BCF28DB3690005A27F1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +145,7 @@
 				2F7D39C828DF2883000AA028 /* Helpers */,
 				2F36715728D1EADE009BFCC2 /* TrieTests.swift */,
 				2F7D39CB28DF28B3000AA028 /* CityViewModelTests.swift */,
+				2F7D39CF28DF2A69000AA028 /* CityListViewControllerTests.swift */,
 			);
 			path = CitiesTests;
 			sourceTree = "<group>";
@@ -298,8 +301,8 @@
 			name = Cities;
 			packageProductDependencies = (
 				2F3D6BCE28DB3690005A27F1 /* SnapKit */,
-				2F3D6BD128DB36A2005A27F1 /* RxCocoa */,
-				2F3D6BD328DB36A2005A27F1 /* RxSwift */,
+				2F7D39DC28DF3073000AA028 /* RxCocoa */,
+				2F7D39DE28DF3073000AA028 /* RxSwift */,
 			);
 			productName = Cities;
 			productReference = 2F36713D28D1EADD009BFCC2 /* Cities.app */;
@@ -353,7 +356,7 @@
 			mainGroup = 2F36713428D1EADD009BFCC2;
 			packageReferences = (
 				2F3D6BCD28DB3690005A27F1 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				2F7D39DB28DF3073000AA028 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 2F36713E28D1EADD009BFCC2 /* Products */;
 			projectDirPath = "";
@@ -419,6 +422,7 @@
 				2F7D39CA28DF2891000AA028 /* DataMockup.swift in Sources */,
 				2F7D39CE28DF28E9000AA028 /* CityListSpy.swift in Sources */,
 				2F36715828D1EADE009BFCC2 /* TrieTests.swift in Sources */,
+				2F7D39D028DF2A69000AA028 /* CityListViewControllerTests.swift in Sources */,
 				2F7D39CC28DF28B3000AA028 /* CityViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,7 +704,7 @@
 				kind = branch;
 			};
 		};
-		2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		2F7D39DB28DF3073000AA028 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -716,14 +720,14 @@
 			package = 2F3D6BCD28DB3690005A27F1 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		2F3D6BD128DB36A2005A27F1 /* RxCocoa */ = {
+		2F7D39DC28DF3073000AA028 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 2F7D39DB28DF3073000AA028 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		2F3D6BD328DB36A2005A27F1 /* RxSwift */ = {
+		2F7D39DE28DF3073000AA028 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2F3D6BD028DB36A2005A27F1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 2F7D39DB28DF3073000AA028 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

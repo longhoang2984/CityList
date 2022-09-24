@@ -58,9 +58,10 @@ class CityListViewController: UIViewController {
             .text
             .orEmpty
             .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
-            .subscribe { [weak self] text in
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] text in
                 self?.viewModel?.searchBy(prefix: text)
-            }.disposed(by: bag)
+            }).disposed(by: bag)
     }
     
     private func setUpTableView() {

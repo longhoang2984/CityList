@@ -11,13 +11,13 @@ import SnapKit
 class CityTableViewCell: UITableViewCell {
     static let identifier: String = String(describing: CityTableViewCell.self)
     
-    private let titleLabel: UILabel = {
+    let titleLabel: UILabel = {
        let lb = UILabel()
         lb.font = UIFont.boldSystemFont(ofSize: 16)
         return lb
     }()
     
-    private let subTitleLabel: UILabel = {
+    let subTitleLabel: UILabel = {
        let lb = UILabel()
         lb.font = UIFont.boldSystemFont(ofSize: 12)
         lb.textColor = .lightGray
