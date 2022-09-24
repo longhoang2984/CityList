@@ -8,25 +8,20 @@
 import Foundation
 import RxSwift
 
-class CityViewModel {
-    private let service: CityService = CityService.shared
+struct CityViewModel {
     var list: BehaviorSubject = BehaviorSubject(value: CitiesResponse())
     private let bag: DisposeBag = DisposeBag()
     let cityTrie = Trie()
     let countryTrie = Trie()
+    private(set) var cities: CitiesResponse
     
-    func getCityList() {
-        switch Reach().connectionStatus() {
-        case .online(_):
-            service.getCityList()
-                .map { self.sort(response: $0) }
-                .subscribe(onNext: { cities in
-                    self.emitList(list: cities)
-                })
-                .disposed(by: bag)
-        default:
-            break
+    init(cities: CitiesResponse) {
+        for city in cities {
+            cityTrie.insert(key: city.name, city: city)
+            countryTrie.insert(key: city.country, city: city)
         }
+        self.cities = cityTrie.cities.sorted(by: { return $0.name < $1.name })
+        emitList(list: self.cities)
     }
     
     private func sort(response: CitiesResponse) -> CitiesResponse  {

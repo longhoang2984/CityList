@@ -36,6 +36,7 @@ class CityTableViewCell: UITableViewCell {
     
     private func setUpUI() {
         selectionStyle = .none
+        accessoryType = .detailDisclosureButton
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.leading.top.equalTo(contentView).offset(10)

@@ -10,13 +10,13 @@ import SnapKit
 import RxCocoa
 import RxSwift
 
-class CityListViewController: UIViewController, UITableViewDelegate {
-    
-    let searchController: UISearchController = UISearchController(searchResultsController: nil)
+class CityListViewController: UIViewController {
     var onViewCityOnMap: ((CityModel) -> Void)
-    init(onViewCityOnMap: @escaping ((CityModel) -> Void), nibName nibNameOrNil: String? = nil,
+    private var service: CityService
+    init(service: CityService, onViewCityOnMap: @escaping ((CityModel) -> Void), nibName nibNameOrNil: String? = nil,
          bundle nibBundleOrNil: Bundle? = nil) {
         self.onViewCityOnMap = onViewCityOnMap
+        self.service = service
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
@@ -25,19 +25,29 @@ class CityListViewController: UIViewController, UITableViewDelegate {
     }
     
     let tableView: UITableView = UITableView()
-    private let viewModel: CityViewModel = CityViewModel()
+    private(set) var viewModel: CityViewModel? {
+        didSet {
+            if oldValue == nil {
+                viewModel?.list
+                        .bind(to: tableView.rx.items(cellIdentifier: CityTableViewCell.identifier, cellType: CityTableViewCell.self)) {  (row, item, cell) in
+                            cell.configCell(cityModel: item)
+                        }
+                        .disposed(by: bag)
+            }
+        }
+    }
     private let bag = DisposeBag()
-    private var list: CitiesResponse = CitiesResponse()
+    let searchController: UISearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchBarAndTitle()
         setUpTableView()
-        viewModel.getCityList()
+        fetchService()
     }
     
-    
     private func setUpSearchBarAndTitle() {
+        self.title = "City"
         navigationItem.title = "City"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
@@ -48,8 +58,8 @@ class CityListViewController: UIViewController, UITableViewDelegate {
             .text
             .orEmpty
             .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
-            .subscribe { text in
-                self.viewModel.searchBy(prefix: text)
+            .subscribe { [weak self] text in
+                self?.viewModel?.searchBy(prefix: text)
             }.disposed(by: bag)
     }
     
@@ -69,11 +79,22 @@ class CityListViewController: UIViewController, UITableViewDelegate {
             guard let city = selectedItem.element else { return }
             self?.onViewCityOnMap(city)
         }.disposed(by: bag)
-
-        viewModel.list
-            .bind(to: tableView.rx.items(cellIdentifier: CityTableViewCell.identifier, cellType: CityTableViewCell.self)) {  (row, item, cell) in
-                cell.configCell(cityModel: item)
-            }
-            .disposed(by: bag)
+    }
+    
+    private func fetchService() {
+        service.getCityList()
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] cities in
+                self?.viewModel = CityViewModel(cities: cities)
+            } onError: { [weak self] error in
+                self?.showError(error: error)
+            }.disposed(by: bag)
+    }
+    
+    private func showError(error: Error) {
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        showDetailViewController(alert, sender: self)
     }
 }

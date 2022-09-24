@@ -16,7 +16,8 @@ class AppCoordinator: BaseCoordinator {
     
     override func start() {
         let navigationController = UINavigationController()
-        let rootViewController = CityListViewController { cityModel in
+        let service = GithubService()
+        let rootViewController = CityListViewController(service: service) { cityModel in
             let coordinator = CityLocationCoordinator(navigationController: navigationController, city: cityModel)
             coordinator.start()
         }
